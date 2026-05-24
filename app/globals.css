@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* === BASE COLORS === */
+  --color-bg-primary:      #0A0A0B;
+  --color-bg-secondary:    #111113;
+  --color-bg-elevated:     #1A1A1E;
+
+  /* === METALLIC ACCENT === */
+  --color-metallic-100:    #F5F5F7;
+  --color-metallic-200:    #D1D1D6;
+  --color-metallic-300:    #98989F;
+  --color-metallic-400:    #636366;
+
+  /* === PRIMARY ACCENT === */
+  --color-accent-primary:  #C0C0C0;
+  --color-accent-glow:     #E8E8EC;
+  --color-accent-dim:      #6B6B70;
+
+  /* === SECONDARY ACCENT === */
+  --color-warm-silver:     #B8B0A8;
+  --color-cold-silver:     #A8B0B8;
+
+  /* === TEXT === */
+  --color-text-primary:    #F0F0F2;
+  --color-text-secondary:  #8E8E93;
+  --color-text-muted:      #48484A;
+  --color-text-inverse:    #0A0A0B;
+
+  /* === BORDER === */
+  --color-border-subtle:   rgba(255, 255, 255, 0.06);
+  --color-border-default:  rgba(255, 255, 255, 0.10);
+  --color-border-strong:   rgba(255, 255, 255, 0.18);
+
+  /* === SEMANTIC === */
+  --color-success:         #30D158;
+  --color-warning:         #FFD60A;
+  --color-error:           #FF453A;
+  
+  /* === GRADIENTS === */
+  --gradient-metallic: linear-gradient(135deg, #C0C0C0 0%, #6B6B70 50%, #C0C0C0 100%);
+  --gradient-dark:     linear-gradient(180deg, #0A0A0B 0%, #111113 100%);
+  --gradient-glow:     radial-gradient(ellipse at center, rgba(192,192,192,0.12) 0%, transparent 70%);
+
+  /* Animation Timings */
+  --ease-out-expo:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quad: cubic-bezier(0.45, 0, 0.55, 1);
+  --ease-spring:      cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth:      cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+body {
+  color: var(--color-text-primary);
+  background: var(--color-bg-primary);
+}
+
+/* Base utility layer */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
