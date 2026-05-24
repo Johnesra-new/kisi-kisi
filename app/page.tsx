@@ -23,16 +23,14 @@ export default function Home() {
     // Force scroll to top on first mount
     window.scrollTo(0, 0)
 
-    const playAlways = localStorage.getItem('playIntroAlways') === 'true'
     const playedBefore = sessionStorage.getItem('hasPlayedIntro')
 
-    if (!playAlways && playedBefore) {
+    if (playedBefore) {
       setRevealHome(true)
       setIntroDone(true)
     } else {
       setRevealHome(false)
       setIntroDone(false)
-      sessionStorage.removeItem('hasPlayedIntro') // Clear cache to allow IntroScreen to animate
     }
   }, [])
 

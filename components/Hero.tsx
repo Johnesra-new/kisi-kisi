@@ -12,22 +12,6 @@ export function Hero({ introDone }: { introDone?: boolean }) {
   const [typedText, setTypedText] = useState('')
   const fullText = "Technical Lead (Tech Lead)"
 
-  // Sync "Intro Always" state with localStorage
-  const [introAlways, setIntroAlways] = useState(false)
-
-  useEffect(() => {
-    setIntroAlways(localStorage.getItem('playIntroAlways') === 'true')
-  }, [])
-
-  const toggleIntroAlways = () => {
-    const newVal = !introAlways
-    setIntroAlways(newVal)
-    localStorage.setItem('playIntroAlways', newVal.toString())
-    if (newVal) {
-      sessionStorage.removeItem('hasPlayedIntro') // Reset so it runs on next refresh
-    }
-  }
-
   useEffect(() => {
     if (introDone === false) return
 
@@ -191,21 +175,6 @@ export function Hero({ introDone }: { introDone?: boolean }) {
             className="relative w-[300px] md:w-[420px] aspect-[4/5] rounded-3xl overflow-hidden border border-border-default shadow-glow-lg group opacity-0"
             style={{ transformStyle: 'preserve-3d' }}
           >
-            {/* Small Intro Toggle Switch absolute-positioned on photo container */}
-            <div className="absolute top-4 right-4 z-30 flex items-center gap-2 bg-bg-primary/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-border-default hover:border-metallic-200 transition-colors pointer-events-auto shadow-glow-sm">
-              <span className="font-mono text-[8px] tracking-wider text-metallic-300 select-none uppercase">Intro Always</span>
-              <button 
-                onClick={toggleIntroAlways}
-                className={`w-7 h-4 rounded-full relative p-0.5 transition-colors duration-300 focus:outline-none flex items-center ${
-                  introAlways ? 'bg-success' : 'bg-metallic-400'
-                }`}
-              >
-                <div className={`w-3 h-3 rounded-full bg-white transition-transform duration-300 shadow-sm ${
-                  introAlways ? 'translate-x-3' : 'translate-x-0'
-                }`} />
-              </button>
-            </div>
-
             {/* Glow effect on hover */}
             <div className="absolute inset-0 bg-gradient-glow opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" />
             
