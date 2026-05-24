@@ -5,8 +5,8 @@ import { schemaTypes } from './sanity/schemas'
 export default defineConfig({
   name: 'default',
   title: 'Josh P. Portfolio',
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'your-project-id',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'k1ja19yi',
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'forporto',
   basePath: '/studio',
   plugins: [structureTool()],
   schema: {
