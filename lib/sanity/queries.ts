@@ -49,6 +49,8 @@ export const TECH_STACK_QUERY = groq`
     name,
     "icon": icon.asset->url,
     category,
-    proficiency
+    proficiency,
+    role,
+    description
   }
 `

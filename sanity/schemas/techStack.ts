@@ -12,10 +12,12 @@ export const techStackSchema = defineType({
       type: 'string',
       options: { list: ['frontend', 'backend', 'database', 'devops', 'tools'] }
     }),
+    defineField({ name: 'role', type: 'string' }),
+    defineField({ name: 'description', type: 'text' }),
     defineField({
       name: 'proficiency',
       type: 'number',
-      validation: Rule => Rule.min(1).max(5)
+      validation: Rule => Rule.min(1).max(100)
     }),
     defineField({ name: 'order', type: 'number' }),
   ]
