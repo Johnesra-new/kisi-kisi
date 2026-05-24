@@ -66,7 +66,7 @@ export function About() {
           
           {/* Photo Side */}
           <div className="lg:col-span-5 flex justify-center lg:justify-start about-photo-wrap">
-            <div className="relative w-[320px] h-[320px]">
+            <div className="relative w-[270px] h-[270px] sm:w-[320px] sm:h-[320px]">
               {/* Rotating Ring */}
               <div className="absolute -inset-4 rounded-full border border-dashed border-metallic-400 animate-[spin_20s_linear_infinite]">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-accent-primary rounded-full shadow-glow-sm" />

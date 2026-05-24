@@ -112,7 +112,7 @@ export function Hero({ introDone }: { introDone?: boolean }) {
           </p>
           
           {/* Interactive Name - JOSH P.S */}
-          <h1 className="hero-text-line text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-metallic-100 via-metallic-200 to-metallic-400 mb-2 cursor-default group inline-block">
+          <h1 className="hero-text-line text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-metallic-100 via-metallic-200 to-metallic-400 mb-2 cursor-default group inline-block">
             <span className="inline-block transition-transform duration-300 hover:-translate-y-2 hover:scale-110 hover:text-white">J</span>
             <span className="inline-block transition-transform duration-300 hover:-translate-y-2 hover:scale-110 hover:text-white">O</span>
             <span className="inline-block transition-transform duration-300 hover:-translate-y-2 hover:scale-110 hover:text-white">S</span>
@@ -123,10 +123,10 @@ export function Hero({ introDone }: { introDone?: boolean }) {
           </h1>
 
           {/* Typewriter Subtitle */}
-          <h2 className="hero-text-line text-2xl md:text-3xl text-metallic-200 font-medium mb-6 relative inline-flex items-center w-max min-h-[40px] font-mono select-none">
+          <h2 className="hero-text-line text-lg sm:text-2xl md:text-3xl text-metallic-200 font-medium mb-6 relative inline-flex items-center max-w-full min-h-[40px] font-mono select-none flex-wrap">
             {typedText}
             {introDone !== false && typedText.length < fullText.length && (
-              <span className="ml-1 w-1.5 h-6 bg-accent-primary animate-[pulse_0.6s_infinite] inline-block shadow-glow-sm" />
+              <span className="ml-1 w-1.5 h-5 sm:h-6 bg-accent-primary animate-[pulse_0.6s_infinite] inline-block shadow-glow-sm" />
             )}
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-accent-primary to-transparent opacity-50"></span>
           </h2>
@@ -159,7 +159,7 @@ export function Hero({ introDone }: { introDone?: boolean }) {
             </a>
           </div>
 
-          <div className="hero-text-line flex items-center gap-3 text-sm text-metallic-300 font-mono bg-bg-elevated w-max px-4 py-2 rounded-full border border-border-default hover:border-success/50 transition-colors duration-300 cursor-default">
+          <div className="hero-text-line flex items-center gap-3 text-sm text-metallic-300 font-mono bg-bg-elevated w-max px-4 py-2 rounded-full border border-border-default hover:border-success/50 transition-colors duration-300 cursor-default max-w-full">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-success"></span>
@@ -172,7 +172,7 @@ export function Hero({ introDone }: { introDone?: boolean }) {
         <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
           <div 
             ref={imageRef}
-            className="relative w-[300px] md:w-[420px] aspect-[4/5] rounded-3xl overflow-hidden border border-border-default shadow-glow-lg group opacity-0"
+            className="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-[420px] aspect-[4/5] rounded-3xl overflow-hidden border border-border-default shadow-glow-lg group opacity-0"
             style={{ transformStyle: 'preserve-3d' }}
           >
             {/* Glow effect on hover */}
