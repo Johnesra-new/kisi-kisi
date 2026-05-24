@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
+import Image from 'next/image'
 
 export function Hero({ introDone }: { introDone?: boolean }) {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -183,13 +184,13 @@ export function Hero({ introDone }: { introDone?: boolean }) {
               TECH LEAD
             </div>
 
-            <img 
+            <Image 
               src="/profile.jpg" 
-              alt="Josh P." 
-              className="object-cover w-full h-full scale-100 group-hover:scale-110 transition-transform duration-[1.5s] ease-out"
-              onError={(e) => {
-                e.currentTarget.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'
-              }}
+              alt="Josh P.S" 
+              fill
+              priority
+              sizes="(max-width: 768px) 280px, (max-width: 1024px) 340px, 420px"
+              className="object-cover scale-100 group-hover:scale-110 transition-transform duration-[1.5s] ease-out"
             />
             
             {/* Border overlay & decorative elements */}

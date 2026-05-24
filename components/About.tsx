@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { gsap } from 'gsap'
+import Image from 'next/image'
 
 export function About() {
   useEffect(() => {
@@ -75,13 +76,12 @@ export function About() {
               
               {/* Anime Profile Photo - centered on character's face using object-[35%_center] */}
               <div className="w-full h-full rounded-full overflow-hidden border-2 border-border-default shadow-glow-md bg-bg-secondary relative group">
-                <img 
+                <Image 
                   src="/profile_about.png" 
-                  alt="Josh P. Anime Profile" 
-                  className="w-full h-full object-cover object-[35%_center] transition-transform duration-[1.5s] ease-out group-hover:scale-110"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                  }}
+                  alt="Josh P.S Anime Profile" 
+                  fill
+                  sizes="(max-width: 640px) 270px, 320px"
+                  className="object-cover object-[35%_center] transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-bg-elevated to-bg-secondary flex items-center justify-center -z-10">
                   <span className="text-4xl font-mono text-metallic-300 opacity-20">JOSH P.S</span>
